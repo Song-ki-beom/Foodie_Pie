@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     DrawerLayout drawerLayout;
     Toolbar toolbarr;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,14 +43,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-  //변경사항 확인
-        //변경사항 확인2
-
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         toolbarr =  (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbarr);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
 
 
