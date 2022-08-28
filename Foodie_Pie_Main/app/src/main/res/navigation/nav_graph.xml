@@ -9,10 +9,10 @@
         android:id="@+id/MainFragment"
         android:name="com.example.foodie_pie_main.MainFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_main">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_MainFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
         <action
             android:id="@+id/goToPost"

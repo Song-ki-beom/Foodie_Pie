@@ -4,9 +4,9 @@ public class SalesInfo {
     private String Title;
     private String Type;
     private String Address;
-    private int FoodImageID;
+    private String FoodImageID;
     private int TypeImageID;
-    public SalesInfo(String title, String type, String address,int foodImageResourceID,int typeImageResourceID){
+    public SalesInfo(String title, String type, String address,String foodImageResourceID,int typeImageResourceID){
         this.Title = title;
         this.Type = type;
         this.Address = address;
@@ -26,7 +26,7 @@ public class SalesInfo {
     public String getAddress(){
         return Address;
     }
-    public int getFoodImageID(){
+    public String getFoodImageID(){
         return FoodImageID;
     }
     public int getTypeImageID(){
@@ -42,8 +42,8 @@ public class SalesInfo {
     public void setAddress(String address){
         this.Address = address;
     }
-    public void setFoodImage(int  foodImageResourceID) {
-        this.FoodImageID = foodImageResourceID;
+    public void setFoodImage(String  foodImageResourceID) {
+        this.FoodImageID =foodImageResourceID;
     }
     public void setTypeImage(int  typeImageResourceID) {
         this.TypeImageID = typeImageResourceID;
