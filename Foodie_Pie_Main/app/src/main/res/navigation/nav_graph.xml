@@ -8,29 +8,25 @@
     <fragment
         android:id="@+id/MainFragment"
         android:name="com.example.foodie_pie_main.MainFragment"
-        android:label="@string/first_fragment_label"
+        android:label="fragment_main"
         tools:layout="@layout/fragment_main">
 
         <action
-            android:id="@+id/action_MainFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-        <action
-            android:id="@+id/goToPost"
+            android:id="@+id/action_MainFragment_to_PostFragment"
             app:destination="@id/postFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.foodie_pie_main.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/MainFragment" />
-    </fragment>
+        android:id="@+id/ChatFragment"
+        android:name="com.example.foodie_pie_main.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/postFragment"
         android:name="com.example.foodie_pie_main.PostFragment"
         android:label="fragment_post"
-        tools:layout="@layout/fragment_post" />
+        tools:layout="@layout/fragment_post" >
+        <action
+            android:id="@+id/action_postFragment_to_ChatFragment"
+            app:destination="@id/ChatFragment" />
+    </fragment>
 </navigation>

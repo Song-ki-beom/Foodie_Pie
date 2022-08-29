@@ -32,7 +32,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
                 FragmentManager fragmentManager = ((AppCompatActivity)context).getSupportFragmentManager();
                 Fragment fragment = fragmentManager.getFragments().get(0);
                 NavHostFragment.findNavController(fragment)
-                        .navigate(R.id.action_MainFragment_to_SecondFragment);
+                        .navigate(R.id.action_MainFragment_to_PostFragment);
 
             }
         });
