@@ -1,0 +1,48 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="개인정보">
+
+        <EditTextPreference
+            app:key="signature"
+            app:title="이름"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="residence"
+            app:title="거주지"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="password"
+            app:title="비밀번호"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="연동">
+
+        <EditTextPreference
+            app:key="phoneNumber"
+            app:title="전화번호"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="email"
+            app:title="이메일"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="bankAccount"
+            app:title="계좌번호"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="환경설정">
+        <SwitchPreference
+            app:key="message"
+            app:summary="메시지 알림을 받으려면 체크하세요"
+            app:title="메시지 알림" />
+        <SwitchPreference
+            app:key="vibrate"
+            app:summary="진동 울림으로 알림을 받으려면 체크하세요"
+            app:title="진동" />
+    </PreferenceCategory>
+</PreferenceScreen>
