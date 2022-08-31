@@ -31,8 +31,11 @@ public class ViewHolder extends RecyclerView.ViewHolder {
                 context = view.getContext();
                 FragmentManager fragmentManager = ((AppCompatActivity)context).getSupportFragmentManager();
                 Fragment fragment = fragmentManager.getFragments().get(0);
+                final int pos = getAbsoluteAdapterPosition(); //클릭시 해당 데이터 position 반환
+                final MainFragmentDirections.ActionMainFragmentToPostFragment action =
+                        MainFragmentDirections.actionMainFragmentToPostFragment(pos);
                 NavHostFragment.findNavController(fragment)
-                        .navigate(R.id.action_MainFragment_to_PostFragment);
+                        .navigate(action);
 
             }
         });
