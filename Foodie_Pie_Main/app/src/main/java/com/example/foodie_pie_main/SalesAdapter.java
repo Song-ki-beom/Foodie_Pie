@@ -13,12 +13,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class SalesAdapter extends RecyclerView.Adapter<ViewHolder>{
-    private ArrayList<SalesInfo> mySalesList = null;
+public  class SalesAdapter extends RecyclerView.Adapter<ViewHolder>{
+    static  ArrayList<SalesInfo> mySalesList = null;
 
     SalesAdapter(ArrayList<SalesInfo> salesList){
         this.mySalesList = salesList;
+
     }
+    SalesAdapter(){
+
+
+    }
+
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
@@ -52,6 +58,11 @@ public class SalesAdapter extends RecyclerView.Adapter<ViewHolder>{
     @Override
     public int getItemCount(){
         return mySalesList.size();
+    }
+
+    public void setItems(ArrayList<SalesInfo> salesList){
+        this.mySalesList = salesList;
+        notifyDataSetChanged();
     }
 
 
