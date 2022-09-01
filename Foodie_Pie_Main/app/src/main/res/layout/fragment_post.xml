@@ -131,7 +131,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
-            android:id="@+id/Foodmage"
+            android:id="@+id/FoodImage"
             android:layout_width="136dp"
             android:layout_height="131dp"
             android:layout_marginStart="16dp"

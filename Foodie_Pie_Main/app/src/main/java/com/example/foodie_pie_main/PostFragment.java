@@ -1,22 +1,16 @@
 package com.example.foodie_pie_main;
 
 import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.os.Bundle;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,7 +21,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.jar.Attributes;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -105,7 +98,7 @@ public class PostFragment extends Fragment {
         detail_text = view.findViewById(R.id.DetailInfo);
         buyDate_text = view.findViewById(R.id.BuyDate);
         dueDate_text= view.findViewById(R.id.DueDate);
-        food_image = view.findViewById(R.id.Foodmage);
+        food_image = view.findViewById(R.id.FoodImage);
 
         SalesList = new ArrayList<SalesInfo>();
         assetManager = getResources().getAssets();
@@ -154,13 +147,14 @@ public class PostFragment extends Fragment {
             String detail_info = subJsonObject.getString("Detail_Info");
             String buy_date = subJsonObject.getString("Buy_Date");
             String due_date = subJsonObject.getString("Due_Date");
+           // String food_image = subJsonObject.getString("FoodImage");
 
             title_text.setText(title);
             name_text.setText(name);
             detail_text.setText(detail_info);
             buyDate_text.setText(buy_date);
             dueDate_text.setText(due_date);
-
+            //food_image.setImage
 
         } catch (JSONException e) {
             e.printStackTrace();
