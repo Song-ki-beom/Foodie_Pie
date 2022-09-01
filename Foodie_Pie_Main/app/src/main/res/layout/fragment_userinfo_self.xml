@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userinfo_selfFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ProfileImage"
+            android:layout_width="124sp"
+            android:layout_height="114sp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.136"
+            app:srcCompat="@drawable/profile"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ProfileImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="User"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/ProfileImage" />
+
+        <TextView
+            android:id="@+id/transNumber"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            android:text="12"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="35dp" />
+
+        <TextView
+            android:id="@+id/authNumber"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="8dp"
+            android:text="3"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/transNumber"
+            app:layout_constraintTop_toBottomOf="@id/username" />
+
+        <TextView
+            android:id="@+id/trustNumber"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="8dp"
+            android:text="2"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/authNumber"
+            app:layout_constraintTop_toBottomOf="@id/username" />
+
+        <TextView
+            android:id="@+id/transNumberText"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            android:text="거래 건수"
+            android:textSize="11sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/transNumber"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="35dp" />
+
+        <TextView
+            android:id="@+id/authNumberText"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="8dp"
+            android:text="인증 등급"
+            android:textSize="11sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/transNumber"
+            app:layout_constraintTop_toBottomOf="@id/authNumber" />
+
+        <TextView
+            android:id="@+id/trustNumberText"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="8dp"
+            android:text="신뢰도"
+            android:textSize="11sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/authNumber"
+            app:layout_constraintTop_toBottomOf="@id/trustNumber" />
+
+        <TextView
+            android:id="@+id/userInfoText"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="30dp"
+            android:text="User Info"
+            android:textSize="35sp"
+            app:layout_constraintTop_toBottomOf="@id/transNumberText"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="34dp" />
+
+        <!--여기까지 공통부분-->
+
+        <ImageButton
+            android:id="@+id/profileSetting"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:src="@drawable/settings"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:layout_constraintHorizontal_bias="0.498"
+            tools:layout_editor_absoluteX="34dp"
+            tools:layout_editor_absoluteY="48dp"
+            app:layout_constraintStart_toEndOf="@id/username"
+            app:layout_constraintBottom_toBottomOf="@id/username"/>
+
+        <ImageButton
+            android:id="@+id/userInfoSetting"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/settings"
+            app:layout_constraintBottom_toBottomOf="@id/userInfoText"
+            app:layout_constraintStart_toEndOf="@id/userInfoText" />
+
+        <TextView
+            android:id="@+id/residenceText"
+            android:layout_width="90sp"
+            android:layout_height="25sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10sp"
+            android:text="거주지"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userInfoText" />
+
+        <TextView
+            android:id="@+id/showResidence"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:text=" 주소"
+            android:textSize="25sp"
+            android:background="@drawable/teduri_black_round"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/residenceText" />
+
+        <TextView
+            android:id="@+id/phoneNumberText"
+            android:layout_width="90sp"
+            android:layout_height="25sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10sp"
+            android:text="전화번호"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/showResidence" />
+
+        <TextView
+            android:id="@+id/showPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:text=" 전화번호"
+            android:textSize="25sp"
+            android:background="@drawable/teduri_black_round"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumberText" />
+
+        <TextView
+            android:id="@+id/accountNumberText"
+            android:layout_width="90sp"
+            android:layout_height="25sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10sp"
+            android:text="계좌번호"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/showPhoneNumber" />
+
+        <TextView
+            android:id="@+id/showAccountNumber"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:text=" 계좌번호"
+            android:textSize="25sp"
+            android:background="@drawable/teduri_black_round"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountNumberText" />
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="90sp"
+            android:layout_height="25sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10sp"
+            android:text="이메일"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/showAccountNumber" />
+
+        <TextView
+            android:id="@+id/showEmail"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:text=" 이메일"
+            android:textSize="25sp"
+            android:background="@drawable/teduri_black_round"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
