@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userinfo_otherFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ProfileImage"
+            android:layout_width="124sp"
+            android:layout_height="114sp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.178"
+            app:srcCompat="@drawable/profile"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ProfileImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="User"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/ProfileImage" />
+
+        <TextView
+            android:id="@+id/transNumber"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            android:text="12"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="35dp" />
+
+        <TextView
+            android:id="@+id/authNumber"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="8dp"
+            android:text="3"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/transNumber"
+            app:layout_constraintTop_toBottomOf="@id/username" />
+
+        <TextView
+            android:id="@+id/trustNumber"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="8dp"
+            android:text="2"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/authNumber"
+            app:layout_constraintTop_toBottomOf="@id/username" />
+
+        <TextView
+            android:id="@+id/transNumberText"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            android:text="거래 건수"
+            android:textSize="11sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/transNumber"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="35dp" />
+
+        <TextView
+            android:id="@+id/authNumberText"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="8dp"
+            android:text="인증 등급"
+            android:textSize="11sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/transNumber"
+            app:layout_constraintTop_toBottomOf="@id/authNumber" />
+
+        <TextView
+            android:id="@+id/trustNumberText"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="8dp"
+            android:text="신뢰도"
+            android:textSize="11sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/authNumber"
+            app:layout_constraintTop_toBottomOf="@id/trustNumber" />
+
+        <View
+            android:id="@+id/userinfoOtherLine"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/trustNumberText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

@@ -14,6 +14,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="go_to_chat">대화하여 거래하기</string>
     <string name="food_infor">가격: 2000원 / 교환가능</string>
+    <string name="logo_title">푸디파이</string>
+    <string name="status_text">게시물</string>
+    <string name="warp_menu_text">&lt;목록&gt;</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
