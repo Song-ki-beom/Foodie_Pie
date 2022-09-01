@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +24,9 @@ public class userinfo_selfFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    ImageButton profileSetting;
+    ImageButton userinfoSetting;
 
     public userinfo_selfFragment() {
         // Required empty public constructor
