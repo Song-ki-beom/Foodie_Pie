@@ -104,9 +104,11 @@
             android:id="@+id/Name"
             android:layout_width="216dp"
             android:layout_height="22dp"
-            android:layout_marginEnd="26dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
             android:text="TextView"
+            android:textSize="15sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/BuyDate"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -114,9 +116,11 @@
             android:id="@+id/BuyDate"
             android:layout_width="216dp"
             android:layout_height="22dp"
-            android:layout_marginEnd="26dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
             android:text="TextView"
+            android:textSize="15sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/DueDate"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -124,18 +128,20 @@
             android:id="@+id/DueDate"
             android:layout_width="216dp"
             android:layout_height="22dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="44dp"
             android:text="TextView"
+            android:textSize="15sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/divider_top2"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
             android:id="@+id/FoodImage"
-            android:layout_width="136dp"
-            android:layout_height="131dp"
+            android:layout_width="133dp"
+            android:layout_height="141dp"
             android:layout_marginStart="16dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="11dp"
             app:layout_constraintBottom_toTopOf="@+id/divider_top2"
             app:layout_constraintStart_toStartOf="parent"
             tools:src="@tools:sample/avatars" />

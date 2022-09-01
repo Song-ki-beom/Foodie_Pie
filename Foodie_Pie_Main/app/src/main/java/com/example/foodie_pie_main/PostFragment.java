@@ -1,6 +1,8 @@
 package com.example.foodie_pie_main;
 
 import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -141,20 +144,25 @@ public class PostFragment extends Fragment {
             String sales = jsonObject.getString("Sales");
             JSONArray jsonArray = new JSONArray(sales);
 
+
+
             JSONObject subJsonObject = jsonArray.getJSONObject(position);
             String title = subJsonObject.getString("Title");
             String name = subJsonObject.getString("Name");
             String detail_info = subJsonObject.getString("Detail_Info");
             String buy_date = subJsonObject.getString("Buy_Date");
             String due_date = subJsonObject.getString("Due_Date");
-           // String food_image = subJsonObject.getString("FoodImage");
+            String data  = subJsonObject.getString("FoodImage");
+            String base64Image = data.split(",")[1];
+            byte[] imageBytes =  Base64.decode(base64Image,0);
+            Bitmap mp = BitmapFactory.decodeByteArray( imageBytes,0, imageBytes.length);
 
             title_text.setText(title);
             name_text.setText(name);
             detail_text.setText(detail_info);
             buyDate_text.setText(buy_date);
             dueDate_text.setText(due_date);
-            //food_image.setImage
+            food_image.setImageBitmap(mp);
 
         } catch (JSONException e) {
             e.printStackTrace();

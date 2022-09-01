@@ -1,4 +1,3 @@
-/*
 package com.example.foodie_pie_main;
 
 import android.os.Bundle;
@@ -10,4 +9,4 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.settings, rootKey);
     }
-}*/
+}
