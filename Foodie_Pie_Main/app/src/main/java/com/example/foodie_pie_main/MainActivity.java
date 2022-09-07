@@ -162,6 +162,19 @@ public class MainActivity extends AppCompatActivity {
                        mypopupWindow.dismiss();
                     }
                 });
+                TextView far2 = (TextView) v1.findViewById(R.id.profile);
+                far2.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v2) {
+                        context = MainActivity.this;
+                        FragmentManager fragmentManager = ((AppCompatActivity)context).getSupportFragmentManager();
+                        Fragment fragment = fragmentManager.getFragments().get(0);
+                        NavHostFragment.findNavController(fragment)
+                                .navigate(R.id.userinfo_selfFragment);
+                        mypopupWindow.dismiss();
+                    }
+                });
 
 
             }

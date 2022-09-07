@@ -31,5 +31,17 @@
         <argument
             android:name="position_num"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_postFragment_to_foodImage_Dialog"
+            app:destination="@id/foodImage_Dialog" />
     </fragment>
+    <fragment
+        android:id="@+id/foodImage_Dialog"
+        android:name="com.example.foodie_pie_main.FoodImage_Dialog"
+        android:label="FoodImage_Dialog" />
+    <fragment
+        android:id="@+id/userinfo_selfFragment"
+        android:name="com.example.foodie_pie_main.userinfo_selfFragment"
+        android:label="fragment_userinfo_self"
+        tools:layout="@layout/fragment_userinfo_self" />
 </navigation>

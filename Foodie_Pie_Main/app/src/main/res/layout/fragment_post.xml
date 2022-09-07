@@ -136,13 +136,17 @@
             app:layout_constraintBottom_toTopOf="@+id/divider_top2"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <ImageView
-            android:id="@+id/FoodImage"
-            android:layout_width="133dp"
-            android:layout_height="141dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="11dp"
+        <ImageButton
+            android:id="@+id/FoodImageButton"
+            android:layout_width="149dp"
+            android:layout_height="147dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="4dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
             app:layout_constraintBottom_toTopOf="@+id/divider_top2"
+            app:layout_constraintEnd_toStartOf="@+id/Name"
             app:layout_constraintStart_toStartOf="parent"
             tools:src="@tools:sample/avatars" />
 
